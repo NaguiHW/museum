@@ -1,0 +1,74 @@
+@import "styles/variables";
+
+.navbarContainer {
+	background-color: $primary-color;
+	height: 120px;
+	display: flex;
+	align-items: center;
+
+	@media screen and (max-width: 640px) {
+		height: auto;
+	}
+
+	.navbar {
+		width: 1200px;
+		margin: 0 auto;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 0px 25px;
+
+		@media screen and (max-width: 640px) {
+			flex-direction: column;
+			padding: 25px;
+		}
+	
+		a {
+			color: $fifth-color;
+			text-decoration: none;
+			font-size: 3rem;
+			margin-top: -10px;
+		}
+
+		.searchArea {
+			padding: 10px 0;
+			
+			@media screen and (max-width: 640px) {
+				width: 100%;
+			}
+
+			.form {
+				padding: 10px 10px 12px 10px;
+				border: 1px solid $third-color;
+				background-color: $fifth-color;
+				border-radius: 25px;
+				display: flex;
+
+				.search {
+					border: none;
+					background-color: $fifth-color;
+					width: 200px;
+					font-size: 1.5rem;
+					box-sizing: unset;
+					width: 90%;
+					
+					&:focus {
+						outline: none;
+						border-bottom: 1px solid $secondary-color;
+					}
+				}
+
+				button {
+					border: none;
+					width: 1.5rem;
+					background-color: $fifth-color;
+					cursor: pointer;
+
+					svg {
+						font-size: 1.5rem;
+					}
+				}
+			}
+		}
+	}
+}
