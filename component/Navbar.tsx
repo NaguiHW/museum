@@ -12,7 +12,9 @@ const Navbar = () => {
 
 	const handleSubmit = (e: { preventDefault: () => void; }) => {
 		e.preventDefault();
-		router.push(`/search/${search}`)
+		if (search !== '') {
+      router.push(`/search/${search}`);
+    }
 	};
 
 	const handleChange = (e: { target: { value: string; }; }) => {
