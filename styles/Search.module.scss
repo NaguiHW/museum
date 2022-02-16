@@ -1,0 +1,31 @@
+@import "styles/variables";
+
+.loadingContainer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+	.banner {
+		height: 400px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		background-color: $secondary-color;
+
+		h1 {
+			margin-top: 120px;
+			color: $primary-color;
+		}
+	}
+
+	.resultsArea {
+		max-width: 1200px;
+		margin: 25px auto 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+}
