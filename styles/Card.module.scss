@@ -1,0 +1,19 @@
+@import "styles/variables";
+
+.card {
+	width: 380px;
+	cursor: pointer;
+	margin-bottom: 20px;
+
+	img {
+		width: 100%;
+	}
+	
+	h2 {
+		margin: 5px 0;
+	}
+
+	&:hover {
+		box-shadow: 5px 5px 5px $secondary-color;
+	}
+}
