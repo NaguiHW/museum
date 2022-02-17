@@ -13,7 +13,7 @@ const SearchWord = () => {
 
 	useEffect(() => {
 		axios
-			.get(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${word}&imgonly=true&p=0&ps=12`)
+			.get(`https://www.rijksmuseum.nl/api/en/collection?key=${process.env.NEXT_PUBLIC_API_KEY}&q=${word}&imgonly=true`)
 			.then(resp => {
 				setResults(resp.data.artObjects);
 				setLoading(false);
@@ -36,9 +36,14 @@ const SearchWord = () => {
 					</div>
 					<div className={styles.resultsArea}>
 						{
-							results.map(({ title, id, principalOrFirstMaker, headerImage }) => (
-								<Card title={title} id={id} principalOrFirstMaker={principalOrFirstMaker} image={headerImage} key={id} />
-							))
+							results.length > 0
+								? (
+									results.map(({ title, objectNumber, principalOrFirstMaker, headerImage }) => (
+										<Card title={title} id={objectNumber} principalOrFirstMaker={principalOrFirstMaker} image={headerImage} key={objectNumber} />
+									))
+								) : (
+									<h1>The search found anything</h1>
+								)
 						}
 					</div>
 				</div>

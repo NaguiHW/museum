@@ -15,7 +15,7 @@ const Card = ({
 	};
 }) => {
 	return (
-		<Link href={`item/${id}`}>
+		<Link href={`/item/${id}`}>
 			<div className={styles.card}>
 				<img src={image.url} alt={title} />
 				<h2>{title}</h2>

@@ -1,6 +1,5 @@
 import axios from 'axios';
 import type { NextPage } from 'next';
-import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import ReactLoading from 'react-loading';
 import { useRouter } from "next/router";
@@ -54,11 +53,6 @@ const Home: NextPage = () => {
           backgroundAttachment: 'fixed'
 
         }}>
-          <Head>
-            <title>My Museum</title>
-            <meta name="description" content="My Museum - App test" />
-            <link rel="icon" href="/favicon.ico" />
-          </Head>
           <div className={styles.searchArea}>
             <h1>Search whatever you want!</h1>
             <form onSubmit={handleSubmit}>
